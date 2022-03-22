@@ -1,0 +1,206 @@
+
+
+@font-face {
+  font-family: roboto;
+  src: url('./font/Roboto-Light.ttf');
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: roboto;
+    
+  }
+body{
+  overflow-x: hidden;
+  background: #1b1919;
+}
+
+::-webkit-scrollbar{
+  width: 1vh;
+  height: 1vh;
+}
+
+::-webkit-scrollbar-track{
+  background-color: #fff;
+  opacity: 0.9;
+}
+
+
+::-webkit-scrollbar-thumb{
+  background-color: #2be793;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: #27ba78;
+}
+
+
+@media screen and (max-width:468px){
+  body{
+    overflow-x: hidden;
+  }
+}
+ 
+/* .img {
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+} */
+  
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  width: auto;
+  padding: 5vh;
+}
+
+.tilt-box-wrap{
+  height: auto;
+  width: auto;
+  position: relative;
+  transition: all 0.6s ease-out;
+  perspective: 1000px;
+  border-radius: 50%;
+
+  
+  -webkit-clip-path: circle(50% at 50% 50%);
+}
+
+.tilt-box-wrap:hover{
+  transition: all 0.2s linear;
+  transform: scale(1.0);
+  
+}
+
+.tilt-box{
+  height: auto;
+  width: 15vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.3s ease-out;
+  transform: rotateX(0deg) rotateY(0deg);
+  perspective: 1000px;
+  transform: preserve-3d;
+ 
+}
+
+.t_over{
+  width: 33.333%;
+  height: 33.333%;
+  position: absolute;
+  z-index: 1;
+  
+}
+
+.t_over:nth-child(1){ left: 0; top: 0; }
+.t_over:nth-child(2){ left: 33.333%; top: 0; }
+.t_over:nth-child(3){ left: 66.666%; top: 0; }
+.t_over:nth-child(4){ left: 0; top: 33.333%; }
+.t_over:nth-child(5){ left: 33.333%; top: 33.333%; }
+.t_over:nth-child(6){ left: 66.666%; top: 33.333%; }
+.t_over:nth-child(7){ left: 0; top: 66.666%; }
+.t_over:nth-child(8){ left: 33.333%; top: 66.666%; }
+.t_over:nth-child(9){ left: 66.666%; top: 66.666%; }
+
+.t_over:nth-child(9):hover ~ .tilt-box{ transform: rotateX(-20deg) rotateY(20deg) }
+.t_over:nth-child(8):hover ~ .tilt-box{ transform: rotateX(-20deg) rotateY(0deg) }
+.t_over:nth-child(7):hover ~ .tilt-box{ transform: rotateX(-20deg) rotateY(-20deg) }
+.t_over:nth-child(6):hover ~ .tilt-box{ transform: rotateX(0deg) rotateY(20deg) }
+.t_over:nth-child(5):hover ~ .tilt-box{ transform: rotateX(0deg) rotateY(0deg) }
+.t_over:nth-child(4):hover ~ .tilt-box{ transform: rotateX(0deg) rotateY(-20deg) }
+.t_over:nth-child(3):hover ~ .tilt-box{ transform: rotateX(20deg) rotateY(20deg) }
+.t_over:nth-child(2):hover ~ .tilt-box{ transform: rotateX(20deg) rotateY(0deg) }
+.t_over:nth-child(1):hover ~ .tilt-box{ transform: rotateX(20deg) rotateY(-20deg) }
+
+@media screen and (max-width:768px){
+  
+  .tilt-box-wrap{
+    height: auto;
+    width: auto;
+    position: relative;
+    transition: all 0.6s ease-out;
+    perspective: 1000px;
+    border-radius: 50%;
+   
+    
+    -webkit-clip-path: circle(50% at 50% 50%);
+  }
+  
+  .tilt-box-wrap:hover{
+    transition: all 0.2s linear;
+    transform: scale(1.0);
+    
+  }
+  
+  .tilt-box{
+    height: 35vh;
+    width: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease-out;
+    transform: rotateX(0deg) rotateY(0deg);
+    perspective: 1000px;
+    transform: preserve-3d;
+   
+  }
+  
+}
+
+@media screen and (max-width:468px){
+  
+  .tilt-box-wrap{
+    height: auto;
+    width: auto;
+    position: relative;
+    transition: all 0.6s ease-out;
+    perspective: 1000px;
+    border-radius: 50%;
+   
+    
+    -webkit-clip-path: circle(50% at 50% 50%);
+  }
+  
+  .tilt-box-wrap:hover{
+    transition: all 0.2s linear;
+    transform: scale(1.0);
+    
+  }
+  
+  .tilt-box{
+    height: 35vh;
+    width: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease-out;
+    transform: rotateX(0deg) rotateY(0deg);
+    perspective: 1000px;
+    transform: preserve-3d;
+   
+  }
+  
+}
