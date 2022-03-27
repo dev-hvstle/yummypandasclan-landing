@@ -1,6 +1,6 @@
 import { FaBars } from 'react-icons/fa';
 import { NavLink as Link } from 'react-router-dom';
-
+import { Link as LinkS} from 'react-scroll';
 import styled from 'styled-components';
 import league from '../../font/LeagueSpartan-Bold.otf'
 
@@ -13,13 +13,17 @@ export const Nav = styled.nav`
   justify-content: space-between;
   padding: 0.5rem calc((100vw - 1400px) / 2);
   z-index: 999;
-
+  margin-top: 2vh;
   /* Third Nav */
   /* justify-content: flex-start; */
 
   @font-face {
     font-family: league;
     src: url(${league});
+  }
+
+  @media screen and (max-width:468px){
+    
   }
 `;
 
@@ -28,12 +32,13 @@ export const NavLogo = styled(Link)`
     color: #fff;
     justify-self: flex-start;
     cursor: pointer;
-    color: black;
     display: flex;
     align-items: center;
     font-family: league;
     font-weight: bold;
     text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.2vh;
 `;
 
 export const ImgLogo = styled.img`
@@ -45,8 +50,8 @@ export const ImgLogo = styled.img`
 
 `
 
-export const NavLink = styled(Link)`
-  color: #000;
+export const NavLink = styled(LinkS)`
+  color: #fff;
   display: flex;
   font-family: league;
   align-items: center;
@@ -54,6 +59,7 @@ export const NavLink = styled(Link)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+  text-shadow: 1px 1px 8px #000;
 
   &.active {
     color: #15cdfc;
@@ -64,13 +70,13 @@ export const Bars = styled(FaBars)`
   display: none;
   color: #fff;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     display: block;
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-100%, 75%);
-    font-size: 1.8rem;
+    transform: translate(-50%, 30%);
+    font-size: 5vh;
     cursor: pointer;
   }
 `;
@@ -90,6 +96,7 @@ export const NavMenu = styled.div`
 
   @media screen and (max-width: 1024px) {
     margin-right: 0vh;
+    display: none;
   }
 
   @media screen and (max-width: 768px) {
@@ -105,6 +112,9 @@ export const NavBtn = styled.nav`
   /* Third Nav */
   /* justify-content: flex-end;
   width: 100vw; */
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -112,10 +122,9 @@ export const NavBtn = styled.nav`
 `;
 
 export const NavBtnLink = styled(Link)`
-  border-radius: 4px;
-  background: #256ce1;
-  padding: 10px 22px;
-  color: #fff;
+  
+
+  
   outline: none;
   border: none;
   cursor: pointer;
@@ -125,9 +134,19 @@ export const NavBtnLink = styled(Link)`
   /* Second Nav */
   margin-left: 24px;
 
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #010606;
-  }
+  
 `;
+
+
+export const SocialImg = styled.img`
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+`

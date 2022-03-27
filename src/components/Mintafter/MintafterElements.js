@@ -1,20 +1,21 @@
 import styled from "styled-components"
 import orbitron from '../../font/Orbitron-Regular.ttf'
 import roboto from '../../font/Roboto-Light.ttf'
+import league from '../../font/LeagueSpartan-Bold.otf'
 
 export const MintafterContainer = styled.div`
     background: #1b1919;
     display: flex;
     justify-content: center;
     padding: 0 0px;
-    height: 100vh;
+    height: auto;
     position: relative;
     z-index: 1;
     align-items: center;
 
     @font-face {
-        font-family: orbitron;
-        src: url(${orbitron});
+        font-family: league;
+        src: url(${league});
     }
 
     @font-face {
@@ -37,14 +38,14 @@ export const MintafterBg = styled.div`
 export const MintafterContent = styled.div`
     max-width: 1200px;
     position: relative;
-    padding: 2vh;
+    padding: 5vh;
     padding-top: 5vh;
     padding-left: 5vh;
     padding-right: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 4vh;
+    top: 5vh;
 
     @media screen and (max-width:468px){
         padding: 0vh;
@@ -86,11 +87,27 @@ export const FlexboxMintafterContainer = styled.div`
 
 export const MintafterH1 = styled.h1`
     text-align: center;
-    font-family: roboto;
+    font-family: league;
     font-size: 2vw;
     color: white;
     text-transform: uppercase;
     padding-bottom: 5vh;
+
+    @media screen and (max-width:1366px){
+        font-size: 4vw;
+    }
+
+    @media screen and (max-width:1024px){
+        font-size: 4vw;
+    }
+
+    @media screen and (max-width:768px){
+        font-size: 6vw;
+    }
+
+    @media screen and (max-width:468px){
+        font-size: 6vw;
+    }
 `
 
 export const ColumnContent = styled.div`
@@ -102,7 +119,7 @@ export const ColumnContent = styled.div`
 
 export const MintAfterH2 = styled.h1`
    
-    font-family: roboto;
+    font-family: league;
     font-size: 4vh;
     color: #f7d020;
     text-align: center;

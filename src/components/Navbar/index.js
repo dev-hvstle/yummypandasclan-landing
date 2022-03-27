@@ -7,33 +7,76 @@ import {
   NavBtn,
   NavBtnLink,
   NavLogo,
-  ImgLogo
+  ImgLogo,
+  SocialImg
 } from './NavbarElements';
+
+import twitter from '../../image/twitterCircle.png'
+import discord from '../../image/discordCircle.png'
+import OpenSea from '../../image/opensea.png'
+import instagram from '../../image/instagramCircle.png'
 import imglogo from '../../image/logopanda.png'
-const Navbar = () => {
+const Navbar = ({toggle}) => {
   return (
     <>
       <Nav>
         <NavLogo to='/'>
           <ImgLogo src={imglogo} /> Yummy Panda's Clan
         </NavLogo>
-        <Bars />
+
+
+        <Bars onClick={toggle}/>
+
+
         <NavMenu>
-          <NavLink to='/story' activeStyle>
+          <NavLink 
+          to='story'
+          smooth={true}
+          duration={500}
+          spy={true}
+          exact='true'
+          offset={0}
+          >
             STORY
           </NavLink>
-          <NavLink to='/roadmap' activeStyle>
+          <NavLink to='roadmap'
+          smooth={true}
+          duration={500}
+          spy={true}
+          exact='true'
+          offset={0}>
             ROADMAP
           </NavLink>
-          <NavLink to='/rarity' activeStyle>
+          <NavLink to='rarity'
+          smooth={true}
+          duration={500}
+          spy={true}
+          exact='true'
+          offset={0}>
             RARITY
           </NavLink>
         </NavMenu>
         <NavBtn>
-          <NavBtnLink to='/signin'>Discord</NavBtnLink>
-          <NavBtnLink to='/signin'>Twitter</NavBtnLink>
-          <NavBtnLink to='/signin'>Instagram</NavBtnLink>
-          <NavBtnLink to='/signin'>OpenSea</NavBtnLink>
+          <NavBtnLink to='/'>
+            <SocialImg src={twitter}>
+            </SocialImg>
+           </NavBtnLink>
+         
+          <NavBtnLink to='/'>
+            <SocialImg src={discord}>
+            </SocialImg>
+           </NavBtnLink>
+         
+          <NavBtnLink to='/'>
+            <SocialImg src={OpenSea}>
+            </SocialImg>
+           </NavBtnLink>
+         
+          <NavBtnLink to='/'>
+            <SocialImg src={instagram}>
+            </SocialImg>
+           </NavBtnLink>
+         
         </NavBtn>
       </Nav>
     </>

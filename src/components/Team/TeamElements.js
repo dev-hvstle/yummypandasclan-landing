@@ -82,11 +82,34 @@ export const ColumnContent = styled.div`
     height: auto;
 `
 
-export const TeamH1 = styled.div`
-    font-family: roboto;
-    font-size: 2vh;
+export const TeamName = styled.h1`
+    font-family: league;
+    font-size: 6vh;
     text-align: center;
     color: white;
+    text-transform: uppercase;
+`
+
+export const TeamH1 = styled.h1`
+    font-family: league;
+    font-size: 3vh;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+`
+export const TeamH2 = styled.h1`
+    font-family: league;
+    font-size: 1.8vh;
+    text-align: center;
+    color: gray;
+`
+
+export const TeamP = styled.p`
+    font-family: roboto;
+    font-size: 1.5vh;
+    text-align: center;
+
+    color: gray;
 `
 
 export const Img = styled.img`

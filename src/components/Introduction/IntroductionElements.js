@@ -37,7 +37,7 @@ export const IntroBg = styled.div`
     right: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 110%;
     overflow: hidden;
     z-index: 0;
 `
@@ -47,13 +47,12 @@ export const IntroContent = styled.div`
     max-width: 1200px;
     position: relative;
     padding: 2vh;
-    padding-top: 5vh;
     padding-left: 5vh;
     padding-right: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 4vh;
+
 
     @media screen and (max-width:468px){
         padding: 0vh;
@@ -64,7 +63,6 @@ export const IntroContent = styled.div`
 export const IntroRow = styled.div`
     display: flex;
     align-items: center;
-    justify-content: center;
 `
 
 export const IntroColumn = styled.div`
@@ -96,8 +94,8 @@ export const FlexboxIntroContainer = styled.div`
 
 export const ColumnContent = styled.div`
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+
     width: 80vh;
     padding: 4vh;
 
@@ -120,13 +118,13 @@ export const ColumnContent = styled.div`
 
 export const ColumnContent2 = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 0vh;
 `
 
 export const IntroH1 = styled.h1`
     font-family: league;
-    color: #000;
+    color: #fff;
     display: flex;
     justify-content: flex-start;
     font-size: 5vh;
@@ -134,43 +132,47 @@ export const IntroH1 = styled.h1`
     margin-bottom: 4vh;
     z-index: 1;
     text-transform: uppercase;
+    text-shadow: 1px 1px 8px #000;
+    text-align: left;
 
     @media screen and (max-width:1024px){
-        text-align: center;
-        justify-content: center;
-        font-size: 4vh;
+        text-align: left;
+        justify-content: flex-start;
+        font-size: 3vh;
     }
 
     @media screen and (max-width:768px){
-        text-align: center;
-        justify-content: center;
+        text-align: left;
+        justify-content: flex-start;
     }
 `
 export const IntroP = styled.p`
     font-family: roboto;
-    color: #000;
+    color: #fff;
     display: flex;
     justify-content: flex-start;
     font-size: 2vh;
     letter-spacing: .2vh;
     line-height: 2.5vh;
+    text-shadow: 2px 2px 8px #000;
+    text-align: left;
 
     @media screen and (max-width:1024px){
-        text-align: center;
-        justify-content: center;
+        text-align: left;
+        justify-content: flex-start;
         font-size: 2vh;
     }
 
     @media screen and (max-width:768px){
-        text-align: center;
-        justify-content: center;
+        text-align: left;
+        justify-content: flex-start;
     }
 `
 
 
 export const Img = styled.img`
     position: relative;
-    height: 20vw;
+    height: 30vw;
     width: auto;
     display: flex;
     justify-content: center;
@@ -195,4 +197,18 @@ export const Img = styled.img`
     @media screen and (max-width:468px){
         height: 60vw;
     }
+`
+
+export const ImgBg = styled.img`
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    background: #232a34;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 `

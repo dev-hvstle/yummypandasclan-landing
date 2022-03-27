@@ -1,17 +1,18 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 import orbitron from '../../font/Orbitron-Regular.ttf'
 import roboto from '../../font/Roboto-Light.ttf'
+import indigo from '../../font/IndigoRegular.otf'
+import league from '../../font/LeagueSpartan-Bold.otf'
 
-export const RoadmapContainer = styled.div`
+export const RarityScaleContainer = styled.div`
     background: #fff;
     display: flex;
     justify-content: center;
     padding: 0 0px;
-    height: 100vh;
+    height: auto;
     position: relative;
-    z-index: 1;
+    z-index: 999;
     align-items: center;
-    overflow-x: scroll;
 
     @font-face {
         font-family: orbitron;
@@ -22,9 +23,19 @@ export const RoadmapContainer = styled.div`
         font-family: roboto;
         src: url(${roboto});
     }
+
+    @font-face {
+        font-family: indigos;
+        src: url(${indigo});
+    }
+
+    @font-face {
+        font-family: league;
+        src: url(${league});
+    }
 `
 
-export const RoadmapBg = styled.div`
+export const RarityScaleBg = styled.div`
     position: absolute;
     top: 0;
     right: 0;
@@ -35,8 +46,7 @@ export const RoadmapBg = styled.div`
     z-index: 0;
 `
 
-export const RoadmapContent = styled.div`
-    z-index: 0;
+export const RarityScaleContent = styled.div`
     max-width: 1200px;
     position: relative;
     padding: 2vh;
@@ -46,67 +56,69 @@ export const RoadmapContent = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 0;
+    @media screen and (max-width:468px){
+        padding: 0vh;
+    }
 `
 
-export const RoadmapRow = styled.div`
+export const RarityScaleRow = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
 `
 
-export const RoadmapColumn = styled.div`
+export const RarityScaleColumn = styled.div`
     padding: 5vh;
+    padding-bottom: 0vh;
 `
 
-export const FlexboxRoadmapContainer = styled.div`
-    position: relative;
-    display: flex;
+export const FlexboxRarityScaleContainer = styled.div`
+    flex: wrap;
     justify-content: space-around;
     align-items: center;
     align-content: space-between;
-    padding: 5vh;
-    left: 15vh;
 
-    @media screen and (max-width:468px){
-        left: 5vh;
-    }
 `
 
 export const ColumnContent = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-
-    width: 40vh;
-
-    
+    width: auto;
+    margin-bottom: 1vh;
+   
 `
 
-export const ColumnContent2 = styled.div`
-    display: flex;
-    align-items: center;
-    padding: 0vh;
-    width: 70vw;
-    height: 5vw;
-
+export const RarityScaleH1 = styled.h1`
+    font-size: 2vh;
+    font-family: league;
+    width: 15vh;
+    
     @media screen and (max-width:468px){
-        width: 30vw;
+        width: 10vh;
+        font-size: 1.5vh;
     }
 `
 
-export const RoadmapH1 = styled.h1`
-    font-size: 5vh;
-    color: #000;
-    font-family: league;
-    padding: 5vh;
+
+
+export const RarityFlexContainer = styled.div`
+    display: flex;
+    justify-content: center;
 `
 
+export const RarityColumnContent = styled.div`
+    flex-wrap: wrap;
+    justify-content: center;
+`
 
 export const Img = styled.img`
     position: relative;
-    height: 60vh;
-    width: auto;
+    width: 100vw;
+    height: 100%;
     display: flex;
     justify-content: center;
-    align-self: center;
+    top: 5vh;
+   
 `

@@ -6,17 +6,18 @@ import { RarityContainer, RarityBg, RarityContent,
      } from './RarityElements'
 import img1 from '../../image/rarity/1.png'
 import img2 from '../../image/rarity/2.png'
-import img3 from '../../image/rarity/3.JPG'
-import img4 from '../../image/rarity/4.JPG'
-import img5 from '../../image/rarity/5.JPG'
-import img6 from '../../image/rarity/6.JPG'
-import img7 from '../../image/rarity/7.JPG'
-import img8 from '../../image/rarity/8.JPG'
+import img3 from '../../image/rarity/3.png'
+import img4 from '../../image/rarity/4.png'
+import img5 from '../../image/rarity/5.png'
+import img6 from '../../image/rarity/6.png'
+import img7 from '../../image/rarity/7.png'
+import img8 from '../../image/rarity/8.png'
 import gif from '../../image/svganimation.GIF'
+import Flip from 'react-reveal/Flip';
 
 const Rarity = () => {
   return (
-    <RarityContainer>
+    <RarityContainer id='rarity'>
         <RarityBg>
 
         </RarityBg>
@@ -43,41 +44,59 @@ const Rarity = () => {
                     
                     <FlexContainer>
                         
-                    
+                        <Flip top>
                         <ImgWrapper>
-                            <Img src={img1} />
+                            <Img src={img8} />
                         </ImgWrapper>
+                        </Flip>
 
+                        <Flip top>
                         <ImgWrapper>
-                            <Img src={img2} />
+                            <Img src={img7} />
                         </ImgWrapper>
-                    
-                        <ImgWrapper>
-                            <Img src={img1} />
-                        </ImgWrapper>
-
-                        <ImgWrapper>
-                            <Img src={img2} />
-                        </ImgWrapper>
-                    
-                        <ImgWrapper>
-                            <Img src={img1} />
-                        </ImgWrapper>
-
-                        <ImgWrapper>
-                            <Img src={img2} />
-                        </ImgWrapper>
-                    
-                        <ImgWrapper>
-                            <Img src={img1} />
-                        </ImgWrapper>
-
-                        <ImgWrapper>
-                            <Img src={img2} />
-                        </ImgWrapper>
-                    
-                     
+                        </Flip>
                         
+                    
+                        <Flip top>
+                        <ImgWrapper>
+                            <Img src={img6} />
+                        </ImgWrapper>
+                        </Flip>
+                        
+
+                        <Flip top>
+                        <ImgWrapper>
+                            <Img src={img5} />
+                        </ImgWrapper>
+                        </Flip>
+                       
+                    
+                        <Flip top>
+                        <ImgWrapper>
+                            <Img src={img4} />
+                        </ImgWrapper>
+                        </Flip>
+                       
+
+                        <Flip top>
+                        <ImgWrapper>
+                            <Img src={img3} />
+                        </ImgWrapper>
+                        </Flip>
+                        
+                    
+                        <Flip top>
+                        <ImgWrapper>
+                            <Img src={img2} />
+                        </ImgWrapper>
+                        </Flip>
+                        
+
+                        <Flip top>
+                        <ImgWrapper>
+                            <Img src={img1} />
+                        </ImgWrapper>
+                        </Flip>
                         
                     </FlexContainer>
 

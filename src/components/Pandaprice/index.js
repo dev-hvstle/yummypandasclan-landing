@@ -1,8 +1,9 @@
 import React from 'react'
 import { PandaContainer, PandaBg, PandaContent, PandaRow,
     PandaColumn, FlexboxPandaContainer, ColumnContent, ColumnContent2,
-    PandaH1, PandaP, PandaFlexContainer,PandaColumnContent, Img} from './PandapriceElements'
-import img from '../../image/xxx.jpg'
+    PandaH1, PandaP, PandaFlexContainer,PandaColumnContent, Img,
+    PandaPFlexContainer, PandaPContent, MintH1, MintDetails} from './PandapriceElements'
+import img from '../../image/fillerv2.png'
 const Pandaprice = () => {
   return (
     <PandaContainer>
@@ -28,9 +29,21 @@ const Pandaprice = () => {
                             <PandaH1>
                             What’s in it for me to buy a Cool Panda?
                             </PandaH1>
-                            <PandaP>
-                            Cool OG 0.05 ETH, Cool WL 0.06 ETH, Public 0.08 ETH.
-                            </PandaP>
+
+                            <PandaPFlexContainer>
+                                <PandaPContent>
+                                    <MintH1>Cool OG</MintH1>
+                                    <MintDetails>0.05 ETH Ξ</MintDetails>
+                                </PandaPContent>
+                                <PandaPContent>
+                                    <MintH1>Cool WL</MintH1>
+                                    <MintDetails>0.06 ETH Ξ</MintDetails>
+                                </PandaPContent>
+                                <PandaPContent>
+                                    <MintH1>Public</MintH1>
+                                    <MintDetails>0.08 ETH Ξ</MintDetails>
+                                </PandaPContent>
+                            </PandaPFlexContainer>
 
                             <PandaP>
                             Cool Monkes are priced to help make minting fun and accessible to everyone. Two Cool Monkes are required to participate in breeding, which will take place shortly after minting.

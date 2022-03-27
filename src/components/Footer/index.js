@@ -2,12 +2,14 @@ import React from 'react'
 import { FooterContainer, FooterBg, FooterContent,
     FooterRow, FooterColumn, FlexboxContainer,
     FlexboxContent, FlexboxContent2, Socials, SocialImg,
-    FooterH1, SocialLinks } from './FooterElements'
+    FooterH1, SocialLinks, ImgLogo } from './FooterElements'
 
-import twitter from '../../image/Twitter.png'
-import discord from '../../image/discord.png'
+import twitter from '../../image/twitterCircle.png'
+import discord from '../../image/discordCircle.png'
 import OpenSea from '../../image/opensea.png'
-import instagram from '../../image/instagram.png'
+import instagram from '../../image/instagramCircle.png'
+import logo from '../../image/footerLogo.JPG'
+
 const Footer = () => {
   return (
         <FooterContainer>
@@ -21,9 +23,19 @@ const Footer = () => {
                         <FlexboxContainer>
 
                             <FlexboxContent2>
+
+
+                                <ImgLogo src={logo}/>
+                             
+                            
                           
-                                
-                                <FooterH1>Contact Us</FooterH1>
+                            </FlexboxContent2>
+
+                            <FlexboxContent2>
+
+
+                                <FooterH1>CONTACT US</FooterH1>
+                             
                             
                           
                             </FlexboxContent2>

@@ -22,6 +22,16 @@ export const TimerContainer = styled.div`
         font-family: roboto;
         src: url(${roboto});
     }
+
+    @media screen and (max-width:1024px){
+        width: auto;
+        height: 55vw;
+    }
+
+    @media screen and (max-width:768px){
+        width: auto;
+        height: 55vw;
+    }
 `
 
 export const TimerBg = styled.div`
@@ -33,6 +43,11 @@ export const TimerBg = styled.div`
     height: 100%;
     overflow: hidden;
     z-index: 0;
+
+    @media screen and (max-width:1024px){
+        width: auto;
+        height: 102%;
+    }
 `
 
 export const TimerContent = styled.div`
@@ -76,12 +91,6 @@ export const ImgBg = styled.img`
     position: relative;
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    background: #232a34;
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+
+    
 `
